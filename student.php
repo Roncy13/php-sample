@@ -29,14 +29,28 @@ Class Student {
 
 interface iStudentDetails {
 
-  public function setAmount();
+  public function setAmount($amount);
 }
 
 Class Returnee extends Student implements iStudentDetails  {
 
-  function __construct() {
-    parent::__construct();
-    echo "<br> returnee";
+  function __construct() {}
+
+  public function setAmount($amount) {
+    $this->amount = $amount / 50;
+  }
+
+  function displayDetails() {
+    $details = array(
+      "firstName" => $this->firstName,
+      "lastName" => $this->lastName,
+      "address" => $this->address,
+      "middleName" => $this->middleName,
+      "amount" => $this->amount,
+    );
+
+    echo json_encode($details);
+    echo "</br>";
   }
 }
 
@@ -51,4 +65,11 @@ $firstStudent->displayDetails();*/
 
 $returnee = new Returnee();
 
+$returnee->firstName = "James";
+$returnee->middleName = "F.";
+$returnee->lastName = "Roncesvalles";
+$returnee->address = "Nova Qc";
+
+$returnee->setAmount(100);
+$returnee->displayDetails();
 ?>
