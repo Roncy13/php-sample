@@ -1,6 +1,8 @@
 <?php
 
-Class Student {
+
+
+abstract Class Student {
 
   public $firstName;
   public $middleName;
@@ -25,14 +27,29 @@ Class Student {
     echo json_encode($details);
     echo "</br>";
   }
+
+  abstract public function setAmount($amount);
 }
 
-interface iStudentDetails {
+/*interface iStudentDetails {
 
   public function setAmount($amount);
 }
+*/
 
-Class Returnee extends Student implements iStudentDetails  {
+Class OldStudent extends Student implements iStudentDetails {
+  public function setAmount($amount) {
+    $this->amount = $amount / 3;
+  }
+}
+
+Class SpecialStudent extends Student implements iStudentDetails {
+  public function setAmount($amount) {
+    $this->amount = $amount / 4;
+  }
+}
+
+Class Returnee extends Student  implements iStudentDetails {
 
   function __construct() {}
 
