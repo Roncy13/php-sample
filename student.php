@@ -24,6 +24,13 @@ Class Student {
   }
 }
 
+Class Returnee extends Student {
+
+  function __construct() {
+    parent::__construct();  
+  }
+}
+
 
 $firstStudent = new Student();
 
