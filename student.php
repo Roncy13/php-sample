@@ -50,5 +50,4 @@ $returnee->lastName = "Roncesvalles";
 $returnee->address = "Nova Qc";
 
 $returnee->setAmount(100);
-echo $returnee->amount;
 ?>
