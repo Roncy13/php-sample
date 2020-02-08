@@ -37,7 +37,7 @@ Class Returnee extends Student implements iStudentDetails  {
   function __construct() {}
 
   public function setAmount($amount) {
-    $this->amount = $amount / 50;
+    $this->amount = $amount / 2;
     $this->displayDetails();
   }
 }
