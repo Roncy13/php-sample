@@ -9,7 +9,9 @@ Class Student {
 
   private $amount = 0;
 
-  function __construct() {}
+  function __construct() {
+    echo "parent";
+  }
 
   function displayDetails() {
     $details = array(
@@ -28,9 +30,9 @@ Class Returnee extends Student {
 
   function __construct() {
     parent::__construct();  
+    echo "<br> returnee";
   }
 }
-
 
 $firstStudent = new Student();
 
@@ -40,4 +42,7 @@ $firstStudent->lastName = "Roncesvalles";
 $firstStudent->address = "Nova Qc";
 
 $firstStudent->displayDetails();
+
+$returnee = new Returnee();
+
 ?>
