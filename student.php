@@ -10,7 +10,7 @@ Class Student {
   private $amount = 0;
 
   function __construct() {
-    echo "parent";
+    $this->displayDetails();
   }
 
   function displayDetails() {
