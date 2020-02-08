@@ -13,7 +13,7 @@ Class Student {
     $this->displayDetails();
   }
 
-  function displayDetails() {
+  protected function displayDetails() {
     $details = array(
       "firstName" => $this->firstName,
       "lastName" => $this->lastName,
@@ -38,30 +38,9 @@ Class Returnee extends Student implements iStudentDetails  {
 
   public function setAmount($amount) {
     $this->amount = $amount / 50;
-  }
-
-  function displayDetails() {
-    $details = array(
-      "firstName" => $this->firstName,
-      "lastName" => $this->lastName,
-      "address" => $this->address,
-      "middleName" => $this->middleName,
-      "amount" => $this->amount,
-    );
-
-    echo json_encode($details);
-    echo "</br>";
+    $this->displayDetails();
   }
 }
-
-/*$firstStudent = new Student();
-
-$firstStudent->firstName = "James";
-$firstStudent->middleName = "F.";
-$firstStudent->lastName = "Roncesvalles";
-$firstStudent->address = "Nova Qc";
-
-$firstStudent->displayDetails();*/
 
 $returnee = new Returnee();
 
@@ -71,6 +50,5 @@ $returnee->lastName = "Roncesvalles";
 $returnee->address = "Nova Qc";
 
 $returnee->setAmount(100);
-$returnee->displayDetails();
 echo $returnee->amount;
 ?>
