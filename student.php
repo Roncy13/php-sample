@@ -7,7 +7,7 @@ Class Student {
   public $lastName;
   public $address;
 
-  private $amount = 0;
+  public $amount = 0;
 
   function __construct() {
     $this->displayDetails();
@@ -72,4 +72,5 @@ $returnee->address = "Nova Qc";
 
 $returnee->setAmount(100);
 $returnee->displayDetails();
+echo $returnee->amount;
 ?>
