@@ -30,19 +30,19 @@ Class Student {
 Class Returnee extends Student {
 
   function __construct() {
-    parent::__construct();  
+    parent::__construct();
     echo "<br> returnee";
   }
 }
 
-$firstStudent = new Student();
+/*$firstStudent = new Student();
 
 $firstStudent->firstName = "James";
 $firstStudent->middleName = "F.";
 $firstStudent->lastName = "Roncesvalles";
 $firstStudent->address = "Nova Qc";
 
-$firstStudent->displayDetails();
+$firstStudent->displayDetails();*/
 
 $returnee = new Returnee();
 
