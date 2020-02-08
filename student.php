@@ -50,4 +50,13 @@ $returnee->lastName = "Roncesvalles";
 $returnee->address = "Nova Qc";
 
 $returnee->setAmount(100);
+
+$student = new Student();
+
+$student->firstName = "James";
+$student->middleName = "F.";
+$student->lastName = "Roncesvalles";
+$student->address = "Nova Qc";
+
+$student->displayDetails();
 ?>
