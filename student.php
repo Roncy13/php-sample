@@ -23,6 +23,7 @@ Class Student {
     );
 
     echo json_encode($details);
+    echo "</br>";
   }
 }
 
