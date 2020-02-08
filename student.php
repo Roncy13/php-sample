@@ -11,6 +11,26 @@ Class Student {
 
   function __construct() {}
 
+  function displayDetails() {
+    $details = array(
+      "firstName" => $this->firstName,
+      "lastName" => $this->lastName,
+      "address" => $this->address,
+      "middleName" => $this->middleName,
+      "amount" => $this->amount,
+    );
+
+    echo json_encode($details);
+  }
 }
 
+
+$firstStudent = new Student();
+
+$firstStudent->firstName = "James";
+$firstStudent->middleName = "F.";
+$firstStudent->lastName = "Roncesvalles";
+$firstStudent->address = "Nova Qc";
+
+$firstStudent->displayDetails();
 ?>
