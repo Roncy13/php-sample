@@ -37,19 +37,19 @@ abstract Class Student {
 }
 */
 
-Class OldStudent extends Student implements iStudentDetails {
+Class OldStudent extends Student {
   public function setAmount($amount) {
     $this->amount = $amount / 3;
   }
 }
 
-Class SpecialStudent extends Student implements iStudentDetails {
+Class SpecialStudent extends Student {
   public function setAmount($amount) {
     $this->amount = $amount / 4;
   }
 }
 
-Class Returnee extends Student  implements iStudentDetails {
+Class Returnee extends Student  {
 
   function __construct() {}
 
@@ -67,13 +67,4 @@ $returnee->lastName = "Roncesvalles";
 $returnee->address = "Nova Qc";
 
 $returnee->setAmount(100);
-
-$student = new Student();
-
-$student->firstName = "James";
-$student->middleName = "F.";
-$student->lastName = "Roncesvalles";
-$student->address = "Nova Qc";
-
-$student->displayDetails();
 ?>
