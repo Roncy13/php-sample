@@ -27,7 +27,12 @@ Class Student {
   }
 }
 
-Class Returnee extends Student {
+interface iStudentDetails {
+
+  public function setAmount();
+}
+
+Class Returnee extends Student implements iStudentDetails  {
 
   function __construct() {
     parent::__construct();
